@@ -77,6 +77,11 @@ ParagonTwinblast/
 StarterContent/
 SampleMap/
 Lighting/
+__ExternalActors__/
+Slash_Pack/
+A_Surface_Footstep/
+FootstepSound/
+Sword_SoundEffects_Pack/
 
 # Compiled source files for the engine to use
 Intermediate/*

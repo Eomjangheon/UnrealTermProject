@@ -1,0 +1,59 @@
+5/1 ~ 5/4
+8방향 움직임과 지상공격, 점프, 이단점프, 공중공격을 만들었다
+8방향 움직임은 유튜브를 통해 2차원 blendSpace를 이용했다. 속도와 방향을 통해 블랜딩
+공격, 점프, 이단점프,... 상태가 많아짐에 따라 유한상태머신 도입이 필요했다.
+이때 string으로 단순하게 상태를 구분했다.
+
+8WayMovement
+https://www.youtube.com/watch?v=EVQ9Q0KiesY&t=4s&ab_channel=PixelHelmet
+--------------------------------------------------------------------------------
+5/16
+졸업작품 1차 발표와 시험으로 인해 프로젝트가 2주간 멈췄다.
+Enum을 사용해서 플레이어의 상태를 전부 바꿔주었다.
+확실히 string보다 사용하기 편하다.
+Niagara Systemp을 이용해서 Sword Trail 효과를 만들어주었다.
+
+EnumSystem/animation 적용
+https://www.youtube.com/watch?v=qC4f4UEs5lM&ab_channel=gotagamee
+
+SwordTrail
+https://www.youtube.com/watch?v=g_ROMGGRQAo&ab_channel=RainRainFX
+----------------------------------------------------------------------------------
+5/17
+여러 무료에셋을 이용해서 플레이어의 매쉬와 맵, 사운드를 추가했다.
+적 블루프린트를 추가했고 믹사모에서 가져온 데이터를 넣었다.
+적에게 공격이 닿을시 파티클, 피격음을 추가했고
+죽을 때 디졸브효과를 추가했다
+디졸브 효과는 나이아가라 시스템과 머티리얼을 굉장히 복잡하게 사용한다.
+솔직히 정확하게는 이해하지 못했고 다시 만들라고하면 영상을 봐야할 것 같다.
+
+Dissolve effect
+https://www.youtube.com/watch?v=woN7Iz1h2dk&t=4s&ab_channel=AlexHuang
+----------------------------------------------------------------------------------
+5/18
+플레이어 스탯으로 
+HP, MP, EXP
+maxHP,maxMP,maxEXP
+regenHP,regenMP 스탯을 추가했다.
+적 처치시 경험치를 획득하고 최대경험치를 도달하면 레벨이 오르게 된다.
+우선 구르기 사용시 마나가 닳게 만들고 ui와 연결하였다.
+ui는 로스트아크에서 가져왔다.
+
+HPbar ui
+https://www.youtube.com/watch?v=PxTpmyWH8Qg&ab_channel=PixelHelmet
+------------------------------------------------------------------------------------
+5/19
+스킬관련 함수를 만들었다. 스킬에 필요한 마나를 넣으면 마나가 충분할 시
+스킬발동, 마나감소, 스킬사운드출력을하고
+부족하다면 스킬반려, 마나가 부족하다는 사운드를 출력했다.
+soundcue를 사용했으며 하나의 큐에서 소리가 겹치는 것을 방지하기위해 동시에 1개만 출력된다.
+우선 윈드밀 스킬을 추가해 적용되는것을 확인했다.
+
+캐릭터 스탯으로 
+CriticalPercentage, CriticalDamage를 추가했다.
+크리티컬 확률에 따라 데미지가 추가되며
+이를 출력하기위한 ui를 만들고 액터를 이용해 데미지를 표시했다.
+크리티컬시 붉게 표시되며, 일반 공격은 하얀색이다.
+
+DamageSystem
+https://www.youtube.com/watch?v=qBDnJTb9Clo&ab_channel=MizzoFrizzo
